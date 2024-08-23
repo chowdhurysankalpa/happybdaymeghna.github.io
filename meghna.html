@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="with=device-width, intial-scale=1.0">
+        <title> HBD Meghna </title>
+        <link rel="stylesheet" href="meghna.css">
+    </head>
+    <body>
+        <section class="header">
+            <div class="preloader">
+                <div class="counter">0</div>
+            </div>
+            <div class="dp">
+                <img src="images/Meghna2.jpeg">
+            </div>
+            <div class="hey">
+                <p1>Hey...</p1>
+                <p2><b>Meghna</b><br></p2>
+            </div>
+            <div class="text-box">
+                <h1><br>Have a good day Ji!!</h1>
+                <p> Happyyy.. <b>Happy Birthday!!🎂🎂</b><br>
+                        Shubha Jonmodin to the most adorable girl 🎉 
+                        I am wishing you a life filled with endless happiness and serenity.💖 
+                        You’re such an inspiration, and I truly admire your dedication and passion. Keep shining and achieving greatness!<br><br>
+
+                        You are beautiful and perfect, but my one piece of advice for today is to prioritize your own health with the same care you give to others. 💕 <br><br>
+
+                        I know you’re great at taking care of yourself, but consider this a gentle reminder to keep your well-being top of mind. Always cherish and nurture your unique voice; it’s a special gift that makes you who you are.🙃❤️<br><br>
+
+                        Savor each moment of life, embrace happiness, and keep smiling always!<br><br>
+                    
+                        Khub valo bhabe katao din ta, r treat ta kobe diba bolba!!???</p>
+                    <a href="https://chat.whatsapp.com/JFiB4e8ES1O7AkZZ5xcVzc" class="hero-btn"><b>Click here to go back to Whatsapp</b></a>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+            function counter(){
+                var count = setInterval(function(){
+                    var c = parseInt($('.counter').text());
+                    $('.counter').text((++c).toString());
+                    if (c == 27){
+                        clearInterval(count);
+                        $('.counter').addClass('hide')
+                        $('.preloader').addClass('active')
+                        }                 
+                },60)
+            }
+            counter()
+        </script>
+    </body>
+</html>
+
+        

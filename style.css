@@ -196,3 +196,19 @@
         font-size: 12px;
 }
 }
+
+/* Apply pointer cursor to buttons and links */
+.hero-btn, a {
+    cursor: pointer;
+}
+
+/* Apply pointer cursor to the entire page */
+body {
+    cursor: pointer;
+}
+
+/* Apply custom cursor to a specific element */
+.custom-cursor {
+    cursor: url('path/to/your-cursor.png'), auto; /* Ensure the image file is accessible */
+}
+

@@ -197,18 +197,39 @@
 }
 }
 
-/* Apply pointer cursor to buttons and links */
-.hero-btn, a {
-    cursor: pointer;
+/* Apply text cursor to specific elements */
+p, .text-box, .reading-cursor {
+    cursor: text; /* The I-beam cursor indicating text can be read or selected */
 }
 
-/* Apply pointer cursor to the entire page */
+/* Apply text cursor to the entire page if needed */
 body {
-    cursor: pointer;
+    cursor: text; /* The I-beam cursor for the whole page */
 }
 
-/* Apply custom cursor to a specific element */
-.custom-cursor {
-    cursor: url('path/to/your-cursor.png'), auto; /* Ensure the image file is accessible */
+/* Example styling for text containers */
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: text; /* Ensuring cursor style is applied */
 }
+
+.text-box h1 {
+    font-size: 32px;
+    font-family: cursive;
+    color: gold;
+}
+
+.text-box p {
+    margin: 10px 0 20px;
+    font-size: 14px;
+    font-family: cursive;
+    color: white;
+}
+
 

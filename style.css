@@ -50,7 +50,7 @@
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Meghna1.jpg);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     position: relative;
     !display: flex;
 }

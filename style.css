@@ -1,9 +1,10 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
 }
-.preloader{
+
+.preloader {
     position: fixed;
     top: 0;
     display: flex;
@@ -14,186 +15,289 @@
     background: #fff;
     z-index: 100000000;
 }
-/*.preloader:before{
-    content: 'Counting...';
-    position: absolute;
-    font-size: 10em;
-    color: rgba(255,255,255,.03);
-}*/
-.preloader.active{
+
+.preloader.active {
     transform: translateY(-100vh);
     transition: ease-in-out 2s;
     transition-delay: 1s;
 }
 
-.counter{
+.counter {
     position: relative;
     color: gold;
     font-size: 14em;
     font-weight: 600;
     z-index: 1;
 }
-.counter:after{
+
+.counter:after {
     content: '.08.2024';
     font-size: 0.5em;
     font-family: cursive;
 }
 
-.hide{
+.hide {
     opacity: 0;
     transition: 1s;
     pointer-events: none;
 }
 
-.header{
+.header {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Meghna1.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('Meghna1.jpg');
     background-position: center;
-    background-size: contain;
+    background-size: cover; /* Ensure the background covers the area */
     position: relative;
-    !display: flex;
+    display: flex; /* Fixed typo */
+    justify-content: center;
+    align-items: center;
 }
 
-
-.dp{
+.dp {
     position: absolute;
     top: 40px;
-    right: 300px;
+    right: 40px; /* Adjusted for better alignment */
 }
-.dp img{
+
+.dp img {
     border-radius: 50%;
     border: 5px solid white;
 }
 
-
-.hey{
-    position:absolute;
+.hey {
+    position: absolute;
     top: 110px;
-    right: 530px;    
+    right: 50px; /* Adjusted for better alignment */
 }
-.hey p1{
+
+.hey p1 {
     font-size: 30px;
     font-family: cursive;
     color: #fff;
 }
-.hey p2{
+
+.hey p2 {
     font-size: 50px;
     color: gold;
 }
 
-
-.text-box{
-    width:90%;
+.text-box {
+    width: 90%;
     color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 }
-.text-box h1{
+
+.text-box h1 {
     font-size: 62px;
-    !font-family: cursive;
+    font-family: cursive; /* Fixed typo */
     color: gold;
 }
-.text-box p{
+
+.text-box p {
     margin: 10px 0 40px;
     font-size: 14px;
     font-family: cursive;
     color: white;
 }
 
-
-.hero-btn{
-        display: inline-block;
-        text-decoration: none;
-        color: #fff;
-        border: 2px solid gold;
-        padding: 12px 34px;
-        font-size: 13px;
-        font-family: inherit;
-        font color: gold;
-        background: transparent;
-        position: relative;
-        cursor: pointer;
-}
-.hero-btn:hover{
-        border: 2px solid #DAA520;
-        background: #DAA520;
-        transition: 1s;
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid gold;
+    padding: 12px 34px;
+    font-size: 13px;
+    font-family: inherit;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
 }
 
-@media all and (max-width: 1900px){
-    .dp{
+.hero-btn:hover {
+    border: 2px solid #DAA520;
+    background: #DAA520;
+    transition: 1s;
+}
+
+/* Media queries for different screen sizes */
+
+/* Laptop screens */
+@media (max-width: 1900px) {
+    .dp {
         top: 36px;
         right: 230px;
-}
-    .dp img{
+    }
+
+    .dp img {
         height: 110px;
         width: 110px;
-        border-radius: 50%;
-        border: 5px solid white;
-}
-    .hey{
+    }
+
+    .hey {
         top: 75px;
-        right: 360px;    
-}
-    .hey p1{
+        right: 360px;
+    }
+
+    .hey p1 {
         font-size: 20px;
-}
-    .hey p2{
+    }
+
+    .hey p2 {
         font-size: 36px;
-}
-    .text-box{
-        width:72%;
-}
-    .text-box h1{
+    }
+
+    .text-box {
+        width: 72%;
+    }
+
+    .text-box h1 {
         font-size: 52px;
-}
-    .text-box p{
+    }
+
+    .text-box p {
         margin: 12px 0 20px;
         font-size: 14px;
-}
-    .hero-btn{
+    }
+
+    .hero-btn {
         padding: 10px 28px;
         font-size: 12px;
-}
+    }
 }
 
-@media (max-width: 1000px){
-    .dp{
-        top: 80px;
-        right: 110px; 
-}
-    .dp img{
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-        border: 5px solid white;
-}
-    .hey{
-        top: 150px;
-        right: 280px;
-}
-    .hey p1{
-        font-size: 22px;
-}
-    .hey p2{
-        font-size: 34px;
-}
-    .text-box{
-        width: 80%;
-}
-    .text-box h1{
-        font-size: 82px;
-}
-    .text-box p{
-        margin: 12px 0 20px;
+/* Tablets and smaller laptops */
+@media (max-width: 1200px) {
+    .dp {
+        top: 30px;
+        right: 20px;
+    }
+
+    .dp img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .hey {
+        top: 50px;
+        right: 20px;
+    }
+
+    .hey p1 {
         font-size: 18px;
+    }
+
+    .hey p2 {
+        font-size: 30px;
+    }
+
+    .text-box {
+        width: 80%;
+    }
+
+    .text-box h1 {
+        font-size: 42px;
+    }
+
+    .text-box p {
+        margin: 10px 0 15px;
+        font-size: 16px;
+    }
+
+    .hero-btn {
+        padding: 8px 20px;
+        font-size: 10px;
+    }
 }
-    .hero-btn{
-        padding: 10px 28px;
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    .dp {
+        top: 20px;
+        right: 10px;
+    }
+
+    .dp img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .hey {
+        top: 20px;
+        right: 10px;
+    }
+
+    .hey p1 {
+        font-size: 16px;
+    }
+
+    .hey p2 {
+        font-size: 24px;
+    }
+
+    .text-box {
+        width: 90%;
+    }
+
+    .text-box h1 {
+        font-size: 32px;
+    }
+
+    .text-box p {
+        margin: 5px 0 10px;
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .dp {
+        top: 10px;
+        right: 10px;
+    }
+
+    .dp img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .hey {
+        top: 10px;
+        right: 10px;
+    }
+
+    .hey p1 {
+        font-size: 14px;
+    }
+
+    .hey p2 {
+        font-size: 20px;
+    }
+
+    .text-box {
+        width: 95%;
+    }
+
+    .text-box h1 {
+        font-size: 24px;
+    }
+
+    .text-box p {
+        margin: 5px 0 10px;
         font-size: 12px;
+    }
+
+    .hero-btn {
+        padding: 6px 10px;
+        font-size: 8px;
+    }
 }
-} 
